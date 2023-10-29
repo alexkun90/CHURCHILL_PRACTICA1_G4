@@ -812,6 +812,55 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   damping: 0.5
   target: {fileID: 1968615120}
+--- !u!1 &619394445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 619394447}
+  - component: {fileID: 619394446}
+  m_Layer: 0
+  m_Name: TankRespaw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &619394446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619394445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f9627e02f551a4881c00e5ea55e6ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TankRespaw: {fileID: 723699131}
+  minX: -20
+  maxX: 20
+  minY: -15
+  maxY: 25
+--- !u!4 &619394447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619394445}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.335666, y: 8.317871, z: -1.2570118}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,7 +1274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACQn+vPWdyhXgIAABMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1T2zAQ/SsZnQtjh2CgtzaE0AOQIXS4+KJY61gTWfJIMklg8t+7K9ux605PUd572n37IX8xqV0FmTd2aaV4MgLY9wmjM/s26clHOPCt0Wv5CZ3mXQpfkIgHzSv30iAe0zVnSvBWZj/0VpE4QrDWMje2XIgtzI3zDuGcKwdIWePptkboa8IO+HNxR1eOeJre0OkTT3fR5ITHDLQH20s7YSdrVLXOFC8rEGS5F19NW3V8G2Qai2kVZDwzSknXOmH+WIVK11UBFqhUITkWFrLHl9cIFCC3hSebw9svee7At54sP95Lix1qwrKfpmlbyd2uMfbBVU2Jklnw1MR8+oe+iAOdW1M+dmnjiFL4Qma7V37MuPODtg7h+4Hz0J49Vzu+UfBegH42S2tqLZD0tqartYPpff/3XNm8gGzX443VEVhX/x8O1XAKxR/mSpYboi5nDbBWJvQ7jB4sTuYXGg6L4doQiJKL3w7e+Ha4QS3xIK3zSLVVarK3MbUlKVuEnlE1tZ8bqyHArekKNFf+uMIwfjzBETdIO2IeOL2VNnnLdU9gdCXAvT6KRtTK7M/DcoXZP4ErXmqvpB4GI+YZGzU3Wjcb5kYs3VvXNucZ9MVuayn+3i2WJzO4ja+vp1kiklwkFzd3SZTcbuLNbBbfxNEVC8snNRbK1apx2vYHx6b74BoXrfuGTJaWV2HbheX7pfwszaDnUudmnVkA/dJEOBsHi0nwWYqFkNihNXgvdRg4+0qZMtkORHoOlIZKFwdvedpHSVklP4wnJGXz8NFIGcHnZV5Z+JCwp+RdsBM7/QFQSwMEFAAACAgAAJCf636pKx9tAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFKamUmqhaGpqVGyWYpZWoqZrrmlmYGZRZJhkomJobmhgbFSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJCf689Z3KFeAgAAEwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJCf636pKx9tAAAAeAAAAAkAJAAAAAAAAAAAAAAAqwIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABjAwAAAAA=
+    dataString: UEsDBBQAAAgIAACQn+sKtYuaXAIAABIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzk3GpuAkvbWEkB5ImNBOLr4Ia401yJJHkvlIhv/eXdnGLp2eEO+93X27WvmTSe0qyLyxCyvF0ghg30aMzuzLqCef4ci3Rq/lB3Sadyl8QSIeNG/cS4N4TGHOlOCtzL7rrSJxhGCtZW5sORdbmBnnHcI5Vw6QssZTtEboc8SO+HPzQCEnPI3v6PSBp4dodMZjBtqD7aWdsJM1qlpnipcVCLLci+879bSRaWymVZDxzCglXeuE+VMVOl1XBVigVoXk2FioHt9OEShAbgtPNofRr3nuwLeeLD89SosTatKyH6YZW8ndrjG256qmQskkeGpyLv+hb+JA59aUz13ZOKISvpDZ7o2fMu78YKxD+HHgPIznwNWObxS8F6BfzMKaWgskva0ptHYwfuz/XjqbFZDteryxegXW1f8vh3o4h+aPMyXLDVG3kwZYKxPmHa4eLN7MTzQcFsO1KRAlF78d/OLb4Qa1xJO0ziPVdqnJ3sbUlqRsHmZG3dR+ZqyGALemK9Bc+dMK0/jrG7ziBmWvmCdOb6Ut3nLdE7gKCXCvj6IramUOl8tyhTkswRWvtVdSQ2+aiBec08xo3SzYcCZd2Lq2Oc8GYdtair9Xi+XJBO7j6XScJSLJRXJz95BEyf0m3kwm8V0cfWVh96TGPrlaNUbb8eCt6T65xj3rPiGjheVVWHZh+WEhP0ozGLnUuVlnFkC/NhkuxsFiEXyVYi4kDmgN3ksd7pt9pkyZbAcivSRKQ6fzo7c87bOkrJJ74wlJ2Sx8M1JG8GWXVxb2Eg5UvEt2Zuc/UEsDBBQAAAgIAACQn+t+qSsfbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrRSmplJqoWhqalRslmKWVqKma65pZmBmUWSYZKJiaG5oYGxUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACQn+sKtYuaXAIAABIFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACQn+t+qSsfbQAAAHgAAAAJACQAAAAAAAAAAAAAAKkCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAYQMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -1832,8 +1881,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773920187}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.2, y: 0.2, z: 0}
+  m_LocalScale: {x: 2.55039, y: 2.668089, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1116241785}
@@ -7983,6 +8032,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2178535060055727599, guid: 44ce65b7c0b459041812130dcd2e7c71, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178535060055727599, guid: 44ce65b7c0b459041812130dcd2e7c71, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2178535060055727602, guid: 44ce65b7c0b459041812130dcd2e7c71, type: 3}

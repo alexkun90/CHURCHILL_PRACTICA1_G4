@@ -11,5 +11,9 @@ public class EnemyController : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+        else if (other.gameObject.tag == "Player")
+        {
+            Destroy(other.gameObject); //esto es para destruir el el player
+        }
     }
 }
