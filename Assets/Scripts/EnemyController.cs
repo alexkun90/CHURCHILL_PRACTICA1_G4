@@ -10,12 +10,10 @@ public class EnemyController : MonoBehaviour
     int _countTankKill = 0;
     [SerializeField]
     TextMeshProUGUI tanksKilled;
-
     void Awake()
     {
         tanksKilled.text = _countTankKill.ToString();
     }
-
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Bullet")

@@ -45,6 +45,7 @@ public class TankSpawner : MonoBehaviour
             for (int i = 0; i < 3; i++)
             {
                 _countTankSpawn++;
+                tanksSpawn.text = _countTankSpawn.ToString();
                 StateManager.Instance.setTanksSpawned(_countTankSpawn);
                 InstantiateTankAtRandomPosition();
             }
