@@ -7,6 +7,8 @@ public class StateManager : Singleton<StateManager>
     string _name;
     int _tanksKilled;
     int _tanksSpawned;
+    
+    //Esto es un comentario
 
 
     public string getName()
