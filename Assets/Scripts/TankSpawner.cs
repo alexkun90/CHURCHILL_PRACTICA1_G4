@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TankSpawner : MonoBehaviour
+/*public class TankSpawner : MonoBehaviour
 {
     public GameObject TankRespaw;
     public float minX, maxX, minY, maxY;
@@ -45,6 +45,7 @@ public class TankSpawner : MonoBehaviour
             for (int i = 0; i < 3; i++)
             {
                 _countTankSpawn++;
+                tanksSpawn.text = _countTankSpawn.ToString();
                 StateManager.Instance.setTanksSpawned(_countTankSpawn);
                 InstantiateTankAtRandomPosition();
             }
@@ -52,3 +53,4 @@ public class TankSpawner : MonoBehaviour
     }
 
 }
+*/
