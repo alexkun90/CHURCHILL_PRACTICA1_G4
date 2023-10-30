@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StateManager : Singleton<StateManager>
 {
-    string _name;
+    string _name =" ";
     string _score;
     int _tanksKilled;
     int _tanksSpawned;

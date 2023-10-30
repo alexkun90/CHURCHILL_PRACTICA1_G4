@@ -7,16 +7,19 @@ using UnityEngine.SceneManagement;
 public class GameOverManager : MonoBehaviour
 {
     [SerializeField]
-    TextMeshProUGUI nameText;
+    TextMeshProUGUI tanksKilled;
+
+    //[SerializeField]
+    //TextMeshProUGUI name;
 
     [SerializeField]
-    TextMeshProUGUI scoreTxt;
+    TextMeshProUGUI tankspawn;
 
     protected virtual void Awake()
     {
-        nameText.text = StateManager.Instance.getName();
-        scoreTxt.text = StateManager.Instance.getScore();
-
+        //name.text = StateManager.Instance.getName();
+        tankspawn.text = StateManager.Instance.getTanksKilled().ToString();
+        tanksKilled.text = StateManager.Instance.getTanksSpawned().ToString();
     }
 
     public void Reiniciar()
