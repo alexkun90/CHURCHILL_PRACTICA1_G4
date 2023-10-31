@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class StateManager : Singleton<StateManager>
 {
-    string _name;
+    string _name =" ";
+    string _score;
     int _tanksKilled;
     int _tanksSpawned;
-
 
     public string getName()
     {
@@ -17,6 +17,16 @@ public class StateManager : Singleton<StateManager>
     public void setName(string newName)
     {
         _name = newName;
+    }
+
+    public void setScore(string newScore)
+    {
+        _score = newScore;
+    }
+
+    public string getScore()
+    {
+        return _score;
     }
 
     public int getTanksKilled()
