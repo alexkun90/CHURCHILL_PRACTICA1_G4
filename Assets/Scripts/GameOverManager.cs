@@ -9,15 +9,15 @@ public class GameOverManager : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI tanksKilled;
 
-    //[SerializeField]
-    //TextMeshProUGUI name;
+    [SerializeField]
+    TextMeshProUGUI name;
 
     [SerializeField]
     TextMeshProUGUI tankspawn;
 
     protected virtual void Awake()
     {
-        //name.text = StateManager.Instance.getName();
+        name.text = StateManager.Instance.getName();
         tankspawn.text = StateManager.Instance.getTanksKilled().ToString();
         tanksKilled.text = StateManager.Instance.getTanksSpawned().ToString();
     }
