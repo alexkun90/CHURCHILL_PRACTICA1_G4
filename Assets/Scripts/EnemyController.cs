@@ -27,7 +27,7 @@ public class EnemyController : MonoBehaviour
         else if (other.gameObject.tag == "Player")
         {
             Destroy(other.gameObject); //esto es para destruir el el player
-            //LevelManager.Instance.NextScene();
+            LevelManager.Instance.NextScene();
         }
     }
 }
