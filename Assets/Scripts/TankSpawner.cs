@@ -5,14 +5,23 @@ using UnityEngine;
 
 public class TankSpawner : MonoBehaviour
 {
-    public GameObject TankRespaw;
+    public GameObject TankRespawn;
+    private GameObject _copy;
     public float minX, maxX, minY, maxY;
 
     [SerializeField]
     TextMeshProUGUI tanksSpawn;
 
+    [SerializeField] GameObject Player;
+
     [SerializeField]
     int _countTankSpawn = 1;
+
+    void Awake()
+    {
+        _copy = Instantiate(TankRespawn);
+        _copy.SetActive(false);
+    }
 
     void Start()
     {
@@ -33,8 +42,15 @@ public class TankSpawner : MonoBehaviour
 
     void InstantiateTankAtRandomPosition()
     {
-        Vector3 randomPosition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0);
-        Instantiate(TankRespaw, randomPosition, Quaternion.identity);
+        Vector3 randomPosition;
+        do
+        {
+            randomPosition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0);
+        }
+        while (isInCircle(randomPosition, Player.transform.position, 5.0F));
+
+        GameObject newInstance = Instantiate(_copy, randomPosition, Quaternion.identity);
+        newInstance.SetActive(true);
     }
 
     IEnumerator InstantiateNewTanks()
@@ -50,6 +66,11 @@ public class TankSpawner : MonoBehaviour
                 InstantiateTankAtRandomPosition();
             }
         }
+    }
+
+    private bool isInCircle(Vector3 point, Vector3 center, float radius)
+    {
+        return Mathf.Sqrt(Mathf.Pow((center.x - point.x),2) + Mathf.Pow((center.y - point.y), 2)) <= radius;
     }
 
 }
