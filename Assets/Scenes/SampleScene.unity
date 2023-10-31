@@ -1192,12 +1192,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f9627e02f551a4881c00e5ea55e6ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TankRespaw: {fileID: 4271457356813261289}
+  TankRespawn: {fileID: 4271457356813261289}
   minX: -20
   maxX: 20
   minY: -15
   maxY: 25
   tanksSpawn: {fileID: 1208415210}
+  Player: {fileID: 1303376905}
   _countTankSpawn: 0
 --- !u!4 &619394447
 Transform:
@@ -1819,6 +1820,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1208415208}
   m_CullTransparentMesh: 1
+--- !u!1 &1303376905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2178535060055727599, guid: 44ce65b7c0b459041812130dcd2e7c71, type: 3}
+  m_PrefabInstance: {fileID: 2178535059832550178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1351015713
 GameObject:
   m_ObjectHideFlags: 0
