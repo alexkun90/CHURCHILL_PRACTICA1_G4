@@ -7,12 +7,13 @@ public class EnemyController : MonoBehaviour
 {
 
     [SerializeField]
-    int _countTankKill = 0;
-    [SerializeField]
     TextMeshProUGUI tanksKilled;
+
+    private bool _isCollide = false;
+
     void Awake()
     {
-        tanksKilled.text = _countTankKill.ToString();
+        tanksKilled.text = "0";
     }
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -20,14 +21,21 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
-            _countTankKill++;
-            tanksKilled.text = _countTankKill.ToString();
-            StateManager.Instance.setTanksKilled(_countTankKill);
+            if (!_isCollide)
+            {
+                _isCollide = true;
+                StateManager.Instance.setTanksKilled(StateManager.Instance.getTanksKilled() + 1);
+            }
         }
         else if (other.gameObject.tag == "Player")
         {
             Destroy(other.gameObject); //esto es para destruir el el player
             LevelManager.Instance.NextScene();
         }
+    }
+
+    private void Update()
+    {
+        tanksKilled.text = StateManager.Instance.getTanksKilled().ToString();
     }
 }

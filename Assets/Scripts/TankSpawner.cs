@@ -14,7 +14,6 @@ public class TankSpawner : MonoBehaviour
 
     [SerializeField] GameObject Player;
 
-    [SerializeField]
     int _countTankSpawn = 1;
 
     void Awake()
@@ -25,14 +24,10 @@ public class TankSpawner : MonoBehaviour
 
     void Start()
     {
-        
+
         // Instanciar 5 tanques al comienzo del juego
         for (int i = 0; i < 4; i++)
         {
-            _countTankSpawn++;
-            tanksSpawn.text = _countTankSpawn.ToString();
-            StateManager.Instance.setTanksSpawned(_countTankSpawn);
-
             InstantiateTankAtRandomPosition();
         }
 
@@ -50,6 +45,9 @@ public class TankSpawner : MonoBehaviour
         while (isInCircle(randomPosition, Player.transform.position, 5.0F));
 
         GameObject newInstance = Instantiate(_copy, randomPosition, Quaternion.identity);
+        _countTankSpawn++;
+        tanksSpawn.text = _countTankSpawn.ToString();
+        StateManager.Instance.setTanksSpawned(_countTankSpawn);
         newInstance.SetActive(true);
     }
 
@@ -60,9 +58,6 @@ public class TankSpawner : MonoBehaviour
             yield return new WaitForSeconds(15f); // Esperar 15 segundos
             for (int i = 0; i < 3; i++)
             {
-                _countTankSpawn++;
-                tanksSpawn.text = _countTankSpawn.ToString();
-                StateManager.Instance.setTanksSpawned(_countTankSpawn);
                 InstantiateTankAtRandomPosition();
             }
         }
@@ -70,7 +65,7 @@ public class TankSpawner : MonoBehaviour
 
     private bool isInCircle(Vector3 point, Vector3 center, float radius)
     {
-        return Mathf.Sqrt(Mathf.Pow((center.x - point.x),2) + Mathf.Pow((center.y - point.y), 2)) <= radius;
+        return Mathf.Sqrt(Mathf.Pow((center.x - point.x), 2) + Mathf.Pow((center.y - point.y), 2)) <= radius;
     }
 
 }

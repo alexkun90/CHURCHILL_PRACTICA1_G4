@@ -18,12 +18,14 @@ public class GameOverManager : MonoBehaviour
     protected virtual void Awake()
     {
         name.text = StateManager.Instance.getName();
-        tankspawn.text = StateManager.Instance.getTanksKilled().ToString();
-        tanksKilled.text = StateManager.Instance.getTanksSpawned().ToString();
+        tankspawn.text = StateManager.Instance.getTanksSpawned().ToString();
+        tanksKilled.text =  StateManager.Instance.getTanksKilled().ToString();
     }
 
     public void Reiniciar()
     {
+        StateManager.Instance.setTanksKilled(0);
+        StateManager.Instance.setTanksSpawned(0);
         LevelManager.Instance.FirstScene();
     }
 
